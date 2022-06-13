@@ -1,30 +1,20 @@
 import './App.css';
-
-const user = { 
-	firstName: "Andriy",
-	shortBiography: "My name is Andriy. I am fourty-seven years old. I am from Ukraine.",
-	publicContacts: {
-		email: "email@gmail.com",
-		phone: "+38-098-777-77-77"
-	} 
-};
-
-/* const Footer = () => (
-	<footer>Footer</footer>
-) */
+import user from './user.json';
+import H1Title  from './H1Title';
+import FirstName  from './FirstNames';
+import Bio  from './Bio';
+import Contacts from './Contacts';
 
 const App = () => (
   
     <div className="App">
-			<h1>{user.firstName}</h1>
-      <div>First Name: {user.firstName}</div>
-			<div>Short biography: 
-				<p>{user.shortBiography}</p>
-			</div>
-			<div>Public contacts:
-				<p>Email: {user.publicContacts.email}</p>
-				<p>Phone: {user.publicContacts.phone}</p>
-			</div>
+			<H1Title title={user.fName} />
+      <FirstName frName={user.fName} />
+			<Bio bio={user.shortBiography} />
+		  <Contacts 
+				email={user.publicContacts.email}
+				phone={user.publicContacts.phone}
+			/>
     </div>
   
 )
