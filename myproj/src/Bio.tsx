@@ -2,9 +2,9 @@ import { FC } from "react";
 	 
 type BioProps = { bio: string };
 
-const Bio: FC<BioProps> = ({bio}) => (
+const Bio: FC<BioProps> = (props) => (
 	<div>Short biography:
-		<p>{bio}</p>
+		<p>{props.bio}</p>
 		<hr />
 	</div>
 );
