@@ -1,0 +1,27 @@
+{
+  "name": "react-hooks-examples",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "start:state": "(SET LESSON=STATE) && (vite)",
+    "start:effect": "(SET LESSON=EFFECT) && (vite)",
+    "start:context": "(SET LESSON=CONTEXT) && (vite)",
+    "start:callback": "(SET LESSON=CALLBACK) && (vite)",
+    "start:custom": "(SET LESSON=CUSTOM) && (vite)"
+  },
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.31",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "^1.3.0",
+    "typescript": "^4.6.3",
+    "vite": "^2.9.7"
+  }
+}
