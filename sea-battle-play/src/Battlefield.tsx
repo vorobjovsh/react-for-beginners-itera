@@ -7,7 +7,7 @@ type CellProps = {
   y: number;
 };
 
-const cellStateMap = {
+const cellStateMap:Record<number, string> = {
   [WATER]: '',
   [SHIP]: '',
   [CHECKED_WATER]: '🌊',
