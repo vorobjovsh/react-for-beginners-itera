@@ -1,0 +1,15 @@
+.line {
+  display: flex;
+}
+
+.disabled {
+  opacity: 0.4;
+}
+
+.cell {
+  border: 1px solid rgb(7, 118, 151);
+  cursor: pointer;
+  background-color: skyblue;
+  min-height: 2.5em;
+  min-width: 2.5em;
+}

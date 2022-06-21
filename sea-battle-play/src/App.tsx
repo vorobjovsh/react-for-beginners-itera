@@ -1,9 +1,10 @@
 import * as React from 'react';
-import { Battlefield } from './Battlefield';
-import { HeaderWithCounter } from './HeaderWithCounter';
-import { ResetButton } from './ResetButton';
+import './App.css';
+import { Battlefield } from './components/Battlefield/Battlefield';
+import { HeaderWithCounter } from './components/HeaderWithCounter/HeaderWithCounter';
+import { ResetButton } from './components/ResetButton/ResetButton';
 import { useGameState } from './state/useGameState';
-import AppFooter from './Footer';
+import AppFooter from './components/Footer/Footer';
 
 import './style.css';
 

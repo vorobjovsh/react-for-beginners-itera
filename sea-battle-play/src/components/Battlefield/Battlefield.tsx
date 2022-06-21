@@ -1,4 +1,5 @@
-import { CHECKED_SHIP, CHECKED_WATER, SHIP, WATER } from './state/cellstate';
+import { CHECKED_SHIP, CHECKED_WATER, SHIP, WATER } from '../../state/cellstate';
+import s from './Battlefield.module.css';
 
 type CellProps = {
   value: number;
@@ -17,7 +18,7 @@ const cellStateMap:Record<number, string> = {
 const Cell = ({ handleClick, value, x, y }: CellProps) => {
   console.log('Cell component called');
   return (
-    <button className={'cell'} onClick={() => handleClick(y, x)}>
+    <button className={s.cell} onClick={() => handleClick(y, x)}>
       {cellStateMap[value]}
     </button>
   );
@@ -33,9 +34,9 @@ export const Battlefield = ({ matrix, onFire, disabled }: BattlefieldProps) => {
   const fire = disabled ? empty : onFire;
   console.log('Battlefield component called');
   return (
-    <div className={`${disabled ? 'disabled' : ''}`}>
+    <div className={`${disabled ? s.disabled : ''}`}>
       {matrix.map((line, lineNumber) => (
-        <div className="line" key={lineNumber}>
+        <div className={s.line} key={lineNumber}>
           {line.map((v, i) => (
             <Cell
               key={`${lineNumber}${i}`}
